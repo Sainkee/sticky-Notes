@@ -41,7 +41,10 @@ btn.addEventListener("click", () => {
     div.innerHTML = `
     <button class ="clbtn">X</button>
     <p class = " "contenteditable="true">${msg.value}</p> `;
-    div.style.backgroundColor = randcolor(colorBucket);
+    div.style.background = `linear-gradient(to right, white,${randcolor(
+      colorBucket
+    )})`;
+
     div.classList.add("sticky-note");
     div.setAttribute("draggable", "true");
     noteDiv.appendChild(div);
